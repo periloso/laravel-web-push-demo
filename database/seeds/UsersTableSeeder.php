@@ -12,11 +12,28 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+//        factory(Post::class, 100)->create()
+//            ->each(function ($post) {
+//                $post->user()->save(
+//                    factory(User::class)->make()
+//                );
+//            });
+//
+//        factory(Post::class, 'unpublished', 10)->create()
+//            ->each(function ($post) {
+//                $post->user()->save(
+//                    factory(User::class)->make()
+//                );
+//            });
+
+        User::truncate();
+
         User::create([
             'name' => 'Alessio',
             'surname' => 'Periloso',
             'password' => 'secret',
             'email' => 'mail@periloso.com',
         ]);
+
     }
 }

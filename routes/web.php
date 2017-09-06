@@ -24,5 +24,4 @@ Route::get('/graphql', function() {
         ->with([
             'graphqlPath' => 'graphql',
         ]);
-
 });

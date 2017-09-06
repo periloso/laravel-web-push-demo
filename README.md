@@ -11,19 +11,20 @@
 It includes the following:
 
 - Vagrant
-- cd ~/Code on vagrant ssh
-- A basic User model (with surname)
-- User password autohash on update (uses a model observer)
-- GraphQL
+- `cd ~/Code` on `vagrant ssh`
+- A basic User model (the surname has been added)
+- User password autohashing on update (it uses a model observer)
+- GraphQL endpoint (POST to http://homestead.app/graphiql)
+- A GraphQL IDE (http://homestead.app/graphql)
 - Authentication scaffolding
-- Heroku & Flynn middleware configuration
+- Heroku & Flynn middleware configuration already set up
 - app/helpers.php file already configured
-- A GraphQL IDE (http://homestead.app/graphiql)
-- GitLab CI Shared Runner testing enabled through phpunit (with code coverage test enabled).
+- GitLab CI Shared Runner testing, enabled through phpunit (the code coverage test has been added too).
 - Laravel IDE Helper
 - Database creation & seeding on vagrant up
 - Minio.io S3 storage support via .env file
-- Laravel Blade Directives Extended by Alessio Periloso are included
+- Laravel Blade Directives Extended by Alessio Periloso
+- Many hints and best-practices comments about how to structure your project: check out the README files! :)
 
 ## About Laravel
 
