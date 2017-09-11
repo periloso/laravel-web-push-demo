@@ -1,0 +1,17 @@
+{
+    "name": "InspirationalTheme",
+    "alias": "inspirationaltheme",
+    "description": "",
+    "keywords": ["example", "stub", "theme"],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Themes\\InspirationalTheme\\Providers\\InspirationalThemeServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php",
+        "helpers.php"
+    ],
+    "requires": []
+}

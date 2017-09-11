@@ -1,0 +1,15 @@
+{
+    "name": "periloso/inspirationalmodule",
+    "description": "",
+    "authors": [
+        {
+            "name": "Alessio Periloso",
+            "email": "mail@periloso.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\InspirationalModule\\": ""
+        }
+    }
+}

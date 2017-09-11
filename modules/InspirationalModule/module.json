@@ -1,0 +1,17 @@
+{
+    "name": "InspirationalModule",
+    "alias": "inspirationalmodule",
+    "description": "",
+    "keywords": ["example","stub","module"],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\InspirationalModule\\Providers\\InspirationalModuleServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php",
+        "helpers.php"
+    ],
+    "requires": []
+}

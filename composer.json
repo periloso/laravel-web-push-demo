@@ -12,7 +12,8 @@
         "periloso/laravel-blade-directives-extended": "dev-master",
         "predis/predis": "^1.1",
         "rebing/graphql-laravel": "^1.4",
-        "temperworks/laravel-russian-doll-cache": "^0.1.0"
+        "temperworks/laravel-russian-doll-cache": "^0.1.0",
+        "nwidart/laravel-modules": "^2.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.4",
@@ -34,7 +35,9 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Modules\\": "modules/",
+            "Themes\\": "themes/"
         },
         "files": [
             "app/helpers.php"
@@ -58,11 +61,14 @@
         "post-create-project-cmd": [
             "@php artisan key:generate"
         ],
+        "pre-autoload-dump": [
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover",
             "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
+            "php artisan module:dump",
             "php artisan route:clear"
         ],
         "post-update-cmd": [

@@ -1,0 +1,15 @@
+{
+    "name": "periloso/inspirationaltheme",
+    "description": "",
+    "authors": [
+        {
+            "name": "Alessio Periloso",
+            "email": "mail@periloso.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Themes\\InspirationalTheme\\": ""
+        }
+    }
+}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "523e45ee118e59afe269eefe8155f770",
+    "content-hash": "036950d61fcb434b20214fab9beeb774",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -405,16 +405,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.2",
+            "version": "v5.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "65da63c8ad4836e2bcddcff75becd49c71c5041c"
+                "reference": "779a98d3b2ebed2128db1a668dcc10a65c9b01be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/65da63c8ad4836e2bcddcff75becd49c71c5041c",
-                "reference": "65da63c8ad4836e2bcddcff75becd49c71c5041c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/779a98d3b2ebed2128db1a668dcc10a65c9b01be",
+                "reference": "779a98d3b2ebed2128db1a668dcc10a65c9b01be",
                 "shasum": ""
             },
             "require": {
@@ -533,7 +533,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-09-04T14:09:04+00:00"
+            "time": "2017-09-07T13:50:21+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -908,6 +908,75 @@
             "time": "2017-09-02T17:10:46+00:00"
         },
         {
+            "name": "nwidart/laravel-modules",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nWidart/laravel-modules.git",
+                "reference": "0e355a75b9567950e9fff978485ae4d8aa36f315"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nWidart/laravel-modules/zipball/0e355a75b9567950e9fff978485ae4d8aa36f315",
+                "reference": "0e355a75b9567950e9fff978485ae4d8aa36f315",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.5.*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.4",
+                "mockery/mockery": "~0.9",
+                "orchestra/testbench": "^3.5",
+                "phpro/grumphp": "^0.11",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Nwidart\\Modules\\LaravelModulesServiceProvider"
+                    ],
+                    "aliases": {
+                        "Module": "Nwidart\\Modules\\Facades\\Module"
+                    }
+                },
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nwidart\\Modules\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Widart",
+                    "email": "n.widart@gmail.com",
+                    "homepage": "https://nicolaswidart.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Module management",
+            "keywords": [
+                "laravel",
+                "module",
+                "modules",
+                "nwidart",
+                "rad"
+            ],
+            "time": "2017-09-10T08:58:13+00:00"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v2.0.10",
             "source": {
@@ -990,7 +1059,7 @@
                 }
             ],
             "description": "Directive Extensions to Laravel Blade templating engine.",
-            "time": "2017-09-06 14:15:55"
+            "time": "2017-09-06T14:15:55+00:00"
         },
         {
             "name": "predis/predis",
@@ -2750,16 +2819,16 @@
         },
         {
             "name": "laravel/homestead",
-            "version": "v6.1.0",
+            "version": "v6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/homestead.git",
-                "reference": "9bb12417850f20cb914134e168d7f771a5f1840f"
+                "reference": "368b3f72b8c33d6c89b4381edd3b0f6570631043"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/homestead/zipball/9bb12417850f20cb914134e168d7f771a5f1840f",
-                "reference": "9bb12417850f20cb914134e168d7f771a5f1840f",
+                "url": "https://api.github.com/repos/laravel/homestead/zipball/368b3f72b8c33d6c89b4381edd3b0f6570631043",
+                "reference": "368b3f72b8c33d6c89b4381edd3b0f6570631043",
                 "shasum": ""
             },
             "require": {
@@ -2796,7 +2865,7 @@
                 }
             ],
             "description": "A virtual machine for web artisans.",
-            "time": "2017-08-13T16:48:20+00:00"
+            "time": "2017-09-09T02:42:35+00:00"
         },
         {
             "name": "mockery/mockery",

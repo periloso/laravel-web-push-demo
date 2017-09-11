@@ -24,6 +24,7 @@ It includes the following:
 - Database creation & seeding on vagrant up
 - Minio.io S3 storage support via .env file
 - Laravel Blade Directives Extended by Alessio Periloso
+- Laravel Modules, to handle modules and themes. They are both already configured.
 - Many hints and best-practices comments about how to structure your project: check out the README files! :)
 
 ## About Laravel
