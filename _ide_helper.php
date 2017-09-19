@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.3 on 2017-09-11.
+ * Generated for Laravel 5.5.4 on 2017-09-19.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -9114,6 +9114,19 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Static version of prepareResponse.
+         *
+         * @param \Symfony\Component\HttpFoundation\Request $request
+         * @param mixed $response
+         * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse 
+         * @static 
+         */ 
+        public static function toResponse($request, $response)
+        {
+            return \Illuminate\Routing\Router::toResponse($request, $response);
+        }
+        
+        /**
          * Substitute the route bindings onto the route.
          *
          * @param \Illuminate\Routing\Route $route
@@ -10767,6 +10780,36 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Get a temporary URL for the file at the given path.
+         *
+         * @param \League\Flysystem\AwsS3v3\AwsS3Adapter $adapter
+         * @param string $path
+         * @param \DateTimeInterface $expiration
+         * @param array $options
+         * @return string 
+         * @static 
+         */ 
+        public static function getAwsTemporaryUrl($adapter, $path, $expiration, $options)
+        {
+            return \Illuminate\Filesystem\FilesystemAdapter::getAwsTemporaryUrl($adapter, $path, $expiration, $options);
+        }
+        
+        /**
+         * Get a temporary URL for the file at the given path.
+         *
+         * @param \League\Flysystem\Rackspace\RackspaceAdapter $adapter
+         * @param string $path
+         * @param \DateTimeInterface $expiration
+         * @param $options
+         * @return string 
+         * @static 
+         */ 
+        public static function getRackspaceTemporaryUrl($adapter, $path, $expiration, $options)
+        {
+            return \Illuminate\Filesystem\FilesystemAdapter::getRackspaceTemporaryUrl($adapter, $path, $expiration, $options);
+        }
+        
+        /**
          * Get an array of all files in a directory.
          *
          * @param string|null $directory
@@ -12285,6 +12328,17 @@ namespace Nwidart\Modules\Facades {
     class Module {
         
         /**
+         * Get & scan all modules.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function scan()
+        {
+            return \Nwidart\Modules\Laravel\Repository::scan();
+        }
+        
+        /**
          * Add other module location.
          *
          * @param string $path
@@ -12293,7 +12347,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function addLocation($path)
         {
-            return \Nwidart\Modules\Repository::addLocation($path);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::addLocation($path);
         }
         
         /**
@@ -12305,7 +12360,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function addPath($path)
         {
-            return \Nwidart\Modules\Repository::addPath($path);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::addPath($path);
         }
         
         /**
@@ -12316,7 +12372,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getPaths()
         {
-            return \Nwidart\Modules\Repository::getPaths();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getPaths();
         }
         
         /**
@@ -12327,18 +12384,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getScanPaths()
         {
-            return \Nwidart\Modules\Repository::getScanPaths();
-        }
-        
-        /**
-         * Get & scan all modules.
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function scan()
-        {
-            return \Nwidart\Modules\Repository::scan();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getScanPaths();
         }
         
         /**
@@ -12349,7 +12396,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function all()
         {
-            return \Nwidart\Modules\Repository::all();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::all();
         }
         
         /**
@@ -12360,7 +12408,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getCached()
         {
-            return \Nwidart\Modules\Repository::getCached();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getCached();
         }
         
         /**
@@ -12371,7 +12420,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function toCollection()
         {
-            return \Nwidart\Modules\Repository::toCollection();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::toCollection();
         }
         
         /**
@@ -12383,7 +12433,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getByStatus($status)
         {
-            return \Nwidart\Modules\Repository::getByStatus($status);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getByStatus($status);
         }
         
         /**
@@ -12395,7 +12446,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function has($name)
         {
-            return \Nwidart\Modules\Repository::has($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::has($name);
         }
         
         /**
@@ -12406,7 +12458,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function enabled()
         {
-            return \Nwidart\Modules\Repository::enabled();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::enabled();
         }
         
         /**
@@ -12417,7 +12470,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function disabled()
         {
-            return \Nwidart\Modules\Repository::disabled();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::disabled();
         }
         
         /**
@@ -12428,7 +12482,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function count()
         {
-            return \Nwidart\Modules\Repository::count();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::count();
         }
         
         /**
@@ -12440,7 +12495,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getOrdered($direction = 'asc')
         {
-            return \Nwidart\Modules\Repository::getOrdered($direction);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getOrdered($direction);
         }
         
         /**
@@ -12451,7 +12507,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getPath()
         {
-            return \Nwidart\Modules\Repository::getPath();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getPath();
         }
         
         /**
@@ -12461,7 +12518,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function register()
         {
-            return \Nwidart\Modules\Repository::register();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::register();
         }
         
         /**
@@ -12471,7 +12529,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function boot()
         {
-            return \Nwidart\Modules\Repository::boot();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::boot();
         }
         
         /**
@@ -12483,7 +12542,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function find($name)
         {
-            return \Nwidart\Modules\Repository::find($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::find($name);
         }
         
         /**
@@ -12495,7 +12555,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function findByAlias($alias)
         {
-            return \Nwidart\Modules\Repository::findByAlias($alias);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::findByAlias($alias);
         }
         
         /**
@@ -12508,7 +12569,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function findRequirements($name)
         {
-            return \Nwidart\Modules\Repository::findRequirements($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::findRequirements($name);
         }
         
         /**
@@ -12520,7 +12582,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function get($name)
         {
-            return \Nwidart\Modules\Repository::get($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::get($name);
         }
         
         /**
@@ -12533,7 +12596,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function findOrFail($name)
         {
-            return \Nwidart\Modules\Repository::findOrFail($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::findOrFail($name);
         }
         
         /**
@@ -12545,7 +12609,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function collections($status = 1)
         {
-            return \Nwidart\Modules\Repository::collections($status);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::collections($status);
         }
         
         /**
@@ -12557,7 +12622,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getModulePath($module)
         {
-            return \Nwidart\Modules\Repository::getModulePath($module);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getModulePath($module);
         }
         
         /**
@@ -12569,7 +12635,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function assetPath($module)
         {
-            return \Nwidart\Modules\Repository::assetPath($module);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::assetPath($module);
         }
         
         /**
@@ -12582,7 +12649,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function config($key, $default = null)
         {
-            return \Nwidart\Modules\Repository::config($key, $default);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::config($key, $default);
         }
         
         /**
@@ -12593,7 +12661,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getUsedStoragePath()
         {
-            return \Nwidart\Modules\Repository::getUsedStoragePath();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getUsedStoragePath();
         }
         
         /**
@@ -12605,7 +12674,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function setUsed($name)
         {
-            return \Nwidart\Modules\Repository::setUsed($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::setUsed($name);
         }
         
         /**
@@ -12616,7 +12686,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getUsedNow()
         {
-            return \Nwidart\Modules\Repository::getUsedNow();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getUsedNow();
         }
         
         /**
@@ -12627,7 +12698,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getUsed()
         {
-            return \Nwidart\Modules\Repository::getUsed();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getUsed();
         }
         
         /**
@@ -12638,7 +12710,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getFiles()
         {
-            return \Nwidart\Modules\Repository::getFiles();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getFiles();
         }
         
         /**
@@ -12649,7 +12722,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getAssetsPath()
         {
-            return \Nwidart\Modules\Repository::getAssetsPath();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getAssetsPath();
         }
         
         /**
@@ -12661,7 +12735,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function asset($asset)
         {
-            return \Nwidart\Modules\Repository::asset($asset);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::asset($asset);
         }
         
         /**
@@ -12673,7 +12748,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function active($name)
         {
-            return \Nwidart\Modules\Repository::active($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::active($name);
         }
         
         /**
@@ -12685,7 +12761,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function notActive($name)
         {
-            return \Nwidart\Modules\Repository::notActive($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::notActive($name);
         }
         
         /**
@@ -12697,7 +12774,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function enable($name)
         {
-            return \Nwidart\Modules\Repository::enable($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::enable($name);
         }
         
         /**
@@ -12709,7 +12787,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function disable($name)
         {
-            return \Nwidart\Modules\Repository::disable($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::disable($name);
         }
         
         /**
@@ -12721,7 +12800,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function delete($name)
         {
-            return \Nwidart\Modules\Repository::delete($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::delete($name);
         }
         
         /**
@@ -12732,7 +12812,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function update($module)
         {
-            return \Nwidart\Modules\Repository::update($module);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::update($module);
         }
         
         /**
@@ -12747,7 +12828,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function install($name, $version = 'dev-master', $type = 'composer', $subtree = false)
         {
-            return \Nwidart\Modules\Repository::install($name, $version, $type, $subtree);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::install($name, $version, $type, $subtree);
         }
         
         /**
@@ -12758,7 +12840,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function getStubPath()
         {
-            return \Nwidart\Modules\Repository::getStubPath();
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::getStubPath();
         }
         
         /**
@@ -12770,7 +12853,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function setStubPath($stubPath)
         {
-            return \Nwidart\Modules\Repository::setStubPath($stubPath);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::setStubPath($stubPath);
         }
         
         /**
@@ -12783,7 +12867,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function macro($name, $macro)
         {
-            \Nwidart\Modules\Repository::macro($name, $macro);
+            //Method inherited from \Nwidart\Modules\Repository            
+            \Nwidart\Modules\Laravel\Repository::macro($name, $macro);
         }
         
         /**
@@ -12795,7 +12880,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function mixin($mixin)
         {
-            \Nwidart\Modules\Repository::mixin($mixin);
+            //Method inherited from \Nwidart\Modules\Repository            
+            \Nwidart\Modules\Laravel\Repository::mixin($mixin);
         }
         
         /**
@@ -12807,7 +12893,8 @@ namespace Nwidart\Modules\Facades {
          */ 
         public static function hasMacro($name)
         {
-            return \Nwidart\Modules\Repository::hasMacro($name);
+            //Method inherited from \Nwidart\Modules\Repository            
+            return \Nwidart\Modules\Laravel\Repository::hasMacro($name);
         }
          
     }
@@ -14814,13 +14901,13 @@ namespace  {
             /**
              * Clone the query without the given properties.
              *
-             * @param array $except
+             * @param array $properties
              * @return static 
              * @static 
              */ 
-            public static function cloneWithout($except)
+            public static function cloneWithout($properties)
             {    
-                return \Illuminate\Database\Query\Builder::cloneWithout($except);
+                return \Illuminate\Database\Query\Builder::cloneWithout($properties);
             }
          
             /**

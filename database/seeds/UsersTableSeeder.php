@@ -26,8 +26,6 @@ class UsersTableSeeder extends Seeder
 //                );
 //            });
 
-        User::truncate();
-
         User::create([
             'name' => 'Alessio',
             'surname' => 'Periloso',

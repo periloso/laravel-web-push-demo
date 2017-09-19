@@ -13,7 +13,9 @@
         "predis/predis": "^1.1",
         "rebing/graphql-laravel": "^1.4",
         "temperworks/laravel-russian-doll-cache": "^0.1.0",
-        "nwidart/laravel-modules": "^2.0"
+        "nwidart/laravel-modules": "^2.0",
+        "laravel-notification-channels/webpush": "^1.0",
+        "pusher/pusher-php-server": "^2.6"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.4",
